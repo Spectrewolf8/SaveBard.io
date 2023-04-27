@@ -6,5 +6,12 @@
   "action": {
     "default_popup": "/popup/popup.html",
     "default_icon": "/images/BardSaveLogo.png"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://bard.google.com/*"],
+      "js": ["/scripts/content.js"]
+    }
+  ],
+  "permissions": ["tabs", "scripting", "activeTab"]
 }
